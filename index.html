@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>嗄嗄叫便當店</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#f59e0b', // amber-500
+              'brand-secondary': '#fbbf24', // amber-400
+              'brand-light': '#fef3c7', // amber-100
+              'brand-dark': '#b45309', // amber-700
+              'warm-gray': '#44403c', // stone-700
+              // 新增的更深層次品牌色
+              'brand-deep-primary': '#d97706', // amber-600
+              'brand-deep-secondary': '#b45309', // amber-700 (與 brand-dark 相同)
+            },
+            fontFamily: {
+              sans: ['"Noto Sans TC"', 'sans-serif'],
+            },
+            keyframes: {
+              kenburns: {
+                '0%': { transform: 'scale(1.1) translate(0, 0)' },
+                '100%': { transform: 'scale(1) translate(-1%, 1%)' },
+              }
+            },
+            animation: {
+              kenburns: 'kenburns 30s ease-out forwards',
+            },
+            // 菜單圖片的自訂比例
+            aspectRatio: {
+              'portrait-menu': '9.9 / 21',
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react/": "https://esm.sh/react@18.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-light">
+    <div id="root"></div>
+  </body>
+</html>
